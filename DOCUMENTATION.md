@@ -181,7 +181,25 @@ Clicking any listing on /listings/ redirects the user completely off-site to my.
 ---
 
 ## Development Notes and Lessons Learned
+## Plugin — Staging Environment
 
+| Item | Detail |
+|------|--------|
+| Plugin File | american-key-idx.php |
+| Current Version | v0.1.0 — Minimal scaffold |
+| GitHub Repo | https://github.com/nikoaz/american-key-realty-idx-plugin |
+| Staging Install Path | /wp-content/plugins/american-key-realty-idx-plugin/ |
+| Staging WP Admin | https://americankeystg.wpenginepowered.com/wp-admin/ |
+| Status | Staging restored from production — March 16, 2026 |
+
+### Plugin Development Rules
+- Deploy one feature at a time — confirm working before adding the next
+- All code committed to GitHub first, then uploaded to staging
+- Install via WP Admin > Plugins > Upload Plugin
+- Disable by renaming folder to _american-key-realty-idx-plugin via FileZilla
+- Never install on production until fully tested on staging
+
+---
 ### Build Incrementally
 The initial large scaffold approach caused a critical error that locked wp-admin on staging (required a production-to-staging restore via WP Engine). All plugin development must be deployed in small, testable increments — one feature at a time, verified working before the next step.
 
